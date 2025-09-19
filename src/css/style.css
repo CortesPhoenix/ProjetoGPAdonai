@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap&family=Bebas+Neue&display=swap');
+
+* {
+    font-family: Epilogue, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: transparent;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    width: 60px;
+    height: 50px;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500px;
+    margin-left: 35px;
+    transition: .4s;
+}
+
+.navbar a:hover {
+    color: #00abf0;
+}
+
+.navbar a.home {
+    color: #00abf0;
+}
+
+
+.navbar a.home:hover {
+    color: #ededed;
+}
+
+.hero {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 0 10%;
+    background: url(../img/hero.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+/* Caso haja mais de um h1 ou h2 ou h3 e etc especificar qual h1,h2 ou h3 
+Ex.: .hero-content h1 */
+
+h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: Bebas Neue, sans-serif
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+    font-family: Teko, sans-serif;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0 15px;
+    font-family: Epilogue, sans-serif;
+}
+
+.hero-content a {
+    font-family: Inter, sans-serif;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    position: relative;
+}
+
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .6s;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+    font-size: 13px;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .6s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.hero-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-sci i {
+    font-size: 16px;
+    display: flex;
+}
+
+.hero-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .6s;
+}
+
+.hero-sci a:hover {
+    color: #081b29;
+}
+
+.hero-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background: #00abf0;
+    transition: .6s;
+}
+
+.hero-sci a:hover::before {
+    width: 100%;
+}
