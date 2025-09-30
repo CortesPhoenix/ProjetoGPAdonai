@@ -209,3 +209,77 @@ p {
 .hero-sci a:hover::before {
     width: 100%;
 }
+
+/* ------------------------
+   ESTILO DO MODAL
+------------------------- */
+.modal {
+  display: none; /* escondido por padrão */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #081b2990;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto; /* rolagem interna */
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  animation: fadeIn .3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  color: #ebeaea;
+  font-family: Roboto, sans-serif;
+}
+
+.modal-content a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content ul li {
+  padding: 20px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-content ul li:last-child {
+  border: none;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
